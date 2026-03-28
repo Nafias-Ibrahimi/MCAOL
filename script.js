@@ -30,12 +30,27 @@
 
 
 
-const searchAllIndexes = (arr, target) => {
-   const result = [];
-   arr.forEach((value, index) => {
-      if (value === target) result.push(index);
-   });
-   return result;
-}
+// const searchAllIndexes = (arr, target) => {
+//    const result = [];
+//    arr.forEach((value, index) => {
+//       if (value === target) result.push(index);
+//    });
+//    return result;
+// }
 
-console.log(searchAllIndexes([1,2,2,2,3,4,5], 2));
+// console.log(searchAllIndexes([1,2,2,2,3,4,5], 2));
+
+const binaryExponentiation=(base ,exponent) =>{
+    let result=1;
+    let currentBase=base;
+    let currentExp=exponent;
+    while(currentExp >0){
+        if(currentExp % 2 === 1){
+            result *=currentBase;
+        }
+        currentBase *= currentBase;
+        currentExp=Math.floor(currentExp / 2);
+    }
+    return result;
+}
+console.log(binaryExponentiation(5,23));
