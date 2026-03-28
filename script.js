@@ -30,6 +30,12 @@
 
 
 
+const searchAllIndexes = (arr, target) => {
+   const result = [];
+   arr.forEach((value, index) => {
+      if (value === target) result.push(index);
+   });
+   return result;
+}
 
-
-
+console.log(searchAllIndexes([1,2,2,2,3,4,5], 2));
